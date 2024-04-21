@@ -1,7 +1,13 @@
 package edu.iit.project;
+
 public class GasPump1 {
 
+    public GasPump1() {
+
+    }
+
     public void activate(int a) {
+
     }
 
     public void start() {
