@@ -8,9 +8,9 @@ public class GasPump1 {
     MDAEFSM m;
     DataStore d;
 
-    public GasPump1() {
-        m = new MDAEFSM();
-        d = new DS1();
+    public GasPump1(MDAEFSM m, DataStore d) {
+        this.m = m;
+        this.d = d;
     }
 
     public void Activate(int a) {
@@ -53,9 +53,10 @@ public class GasPump1 {
     }
 
     public void Pump() {
-        if(((DS1) d).w == 1)
+        DS1 d = (DS1) this.d;
+        if( d.w == 1)
             m.Pump();
-        else if(((DS1) d).cash < ((DS1) d).price*(((DS1) d).L + 1)){
+        else if(d.cash < d.price*(d.L + 1)){
             m.StopPump();
             m.Receipt();
         } else {

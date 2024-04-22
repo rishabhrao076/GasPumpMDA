@@ -3,76 +3,81 @@ package edu.iit.project.mda.states;
 import edu.iit.project.mda.MDAEFSM;
 import edu.iit.project.mda.OP;
 
-public class State {
+public abstract class State {
     MDAEFSM m;
     OP op;
+
+    public State(MDAEFSM m, OP op) {
+        this.m = m;
+        this.op = op;
+    }
+
     public void StorePrices() {
-        // Implementation goes here
+        // Store prices in the system
     }
 
     // Displays a type of payment method
     public void PayMsg() {
-        // Implementation goes here
+        // Display payment instructions
     }
 
     // Stores cash from the temporary data store
     public void StoreCash() {
-        // Implementation goes here
+        // Store cash received
     }
 
     // Display a menu with a list of selections
     public void DisplayMenu() {
-        // Implementation goes here
+        // Display menu options
     }
 
     // Displays credit card not approved message
     public void RejectMsg() {
-        // Implementation goes here
+        // Display credit card rejection message
     }
 
     // Set the price for the gas identified by g identifier as in SelectGas(int g)
     public void SetPrice(int g) {
-        // Implementation goes here
+        // Set the price for the selected gas
     }
 
     // Set G (or L) and total to 0
     public void SetInitialValues() {
-        // Implementation goes here
+        // Initialize gas and total to zero
     }
 
     // Disposes unit of gas and counts # of units disposed and computes Total
     public void PumpGasUnit() {
-        // Implementation goes here
+        // Dispense gas and calculate total
     }
 
     // Displays the amount of disposed gas
     public void GasPumpedMsg() {
-        // Implementation goes here
+        // Display message indicating gas pumped
     }
 
     // Print a receipt
     public void PrintReceipt() {
-        // Implementation goes here
+        // Print a transaction receipt
     }
 
     // Displays a cancellation message
     public void CancelMsg() {
-        // Implementation goes here
+        // Display cancellation message
     }
 
     // Returns the remaining cash
     public void ReturnCash() {
-        // Implementation goes here
+        // Return remaining cash to customer
     }
 
     // Stores pay type t to variable w in the data store
     public void SetPayType(int t) {
-        // Implementation goes here
     }
 
     // Card is ejected
     public void EjectCard() {
-        // Implementation goes here
+        // Eject the credit card
     }
 
 }

@@ -1,4 +1,31 @@
 package edu.iit.project.mda.states;
+
+import edu.iit.project.mda.MDAEFSM;
+import edu.iit.project.mda.OP;
+
 public class S2 extends State {
-    
+
+    public S2(MDAEFSM m, OP op) {
+        super(m, op);
+    }
+
+    @Override
+    public void SetPayType(int t) {
+        op.SetPayType(t);
+    }
+
+    @Override
+    public void DisplayMenu() {
+        op.DisplayMenu();
+    }
+
+    @Override
+    public void RejectMsg() {
+        op.RejectMsg();
+    }
+
+    @Override
+    public void EjectCard() {
+        op.EjectCard();
+    }
 }

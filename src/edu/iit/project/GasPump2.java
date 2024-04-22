@@ -8,9 +8,9 @@ public class GasPump2 {
     MDAEFSM m;
     DataStore d;
 
-    public GasPump2() {
-        m = new MDAEFSM();
-        d = new DS2();
+    public GasPump2(MDAEFSM m, DataStore d) {
+        this.m = m;
+        this.d = d;
     }
 
     public void Activate(float a, float b, float c) {

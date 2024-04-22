@@ -2,13 +2,23 @@ package edu.iit.project.mda;
 
 import edu.iit.project.datastore.DataStore;
 import edu.iit.project.factories.AbstractFactory;
+import edu.iit.project.strategies.storeprice.StorePrice;
 
 public class OP {
     AbstractFactory af;
     DataStore d;
+    StorePrice sp;
+
+
+    public OP(AbstractFactory af, DataStore d) {
+        this.af = af;
+        this.d = d;
+        this.sp = this.af.StorePrices();
+    }
+
     // Stores price(s) for the gas from the temporary data store
     public void StorePrices() {
-        // Implementation goes here
+        this.sp.storePrice();
     }
 
     // Displays a type of payment method

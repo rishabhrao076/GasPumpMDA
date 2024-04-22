@@ -1,5 +1,11 @@
 import edu.iit.project.GasPump1;
 import edu.iit.project.GasPump2;
+import edu.iit.project.datastore.DS1;
+import edu.iit.project.datastore.DataStore;
+import edu.iit.project.factories.AbstractFactory;
+import edu.iit.project.factories.GP1Factory;
+import edu.iit.project.mda.MDAEFSM;
+import edu.iit.project.mda.OP;
 
 import java.util.Scanner;
 
@@ -37,8 +43,12 @@ public class Main {
     }
 
     public static void startGasPump1(Scanner sc) {
-        // partial driver
-        GasPump1 gp1 = new GasPump1();
+
+        AbstractFactory af = new GP1Factory();
+        DataStore d = af.GetDataStore();
+        OP op = new OP(af,d);
+        MDAEFSM m = new MDAEFSM(op);
+        GasPump1 gp1 = new GasPump1(m,d);
 
         System.out.print("                          GasPump-1");
         System.out.print("\n");
@@ -164,8 +174,12 @@ public class Main {
 
 
     public static void startGasPump2(Scanner sc) {
-        // partial driver
-        GasPump1 gp2 = new GasPump1();
+
+        AbstractFactory af = new GP1Factory();
+        DataStore d = af.GetDataStore();
+        OP op = new OP(af,d);
+        MDAEFSM m = new MDAEFSM(op);
+        GasPump1 gp2 = new GasPump1(m,d);
 
         System.out.print("                          GasPump-1");
         System.out.print("\n");
