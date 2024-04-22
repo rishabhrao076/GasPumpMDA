@@ -1,4 +1,5 @@
 import edu.iit.project.GasPump1;
+import edu.iit.project.GasPump2;
 
 import java.util.Scanner;
 
@@ -84,28 +85,28 @@ public class Main {
                     System.out.print("  Enter value of the parameter a:");
                     System.out.print("\n");
                     int a = sc.nextInt();
-                    gp1.activate(a);
+                    gp1.Activate(a);
                     break;
                 }
 
                 case '1': { //Start
                     System.out.print("  Operation:  Start()");
                     System.out.print("\n");
-                    gp1.start();
+                    gp1.Start();
                     break;
                 }
 
                 case '2': { //PayCredit
                     System.out.print("  Operation:  PayCredit()");
                     System.out.print("\n");
-                    gp1.payCredit();
+                    gp1.PayCredit();
                     break;
                 }
 
                 case '3': { //Reject
                     System.out.print("  Operation:  Reject()");
                     System.out.print("\n");
-                    gp1.reject();
+                    gp1.Reject();
                     break;
                 }
 
@@ -119,7 +120,7 @@ public class Main {
                 case '5': { //Approved
                     System.out.print("  Operation:  Approved()");
                     System.out.print("\n");
-                    gp1.approved();
+                    gp1.Approved();
                     break;
                 }
 
@@ -129,14 +130,14 @@ public class Main {
                     System.out.print("  Enter value of the parameter c:");
                     System.out.print("\n");
                     int c = sc.nextInt();
-                    gp1.payCash(c);
+                    gp1.PayCash(c);
                     break;
                 }
 
                 case '7': { //StartPump
                     System.out.print("  Operation:  StartPump()");
                     System.out.print("\n");
-                    gp1.startPump();
+                    gp1.StartPump();
                     break;
                 }
 
@@ -144,14 +145,14 @@ public class Main {
                 case '8': { //Pump
                     System.out.print("  Operation: Pump()");
                     System.out.print("\n");
-                    gp1.pump();
+                    gp1.Pump();
                     break;
                 }
 
                 case '9': { //StopPump
                     System.out.print("  Operation:  StopPump()");
                     System.out.print("\n");
-                    gp1.stopPump();
+                    gp1.StopPump();
                     break;
                 }
             }
@@ -164,7 +165,7 @@ public class Main {
 
     public static void startGasPump2(Scanner sc) {
         // partial driver
-        GasPump1 gp1 = new GasPump1();
+        GasPump1 gp2 = new GasPump1();
 
         System.out.print("                          GasPump-1");
         System.out.print("\n");
@@ -211,42 +212,42 @@ public class Main {
                     System.out.print("  Enter value of the parameter a:");
                     System.out.print("\n");
                     int a = sc.nextInt();
-                    gp1.activate(a);
+                    gp2.Activate(a);
                     break;
                 }
 
                 case '1': { //Start
                     System.out.print("  Operation:  Start()");
                     System.out.print("\n");
-                    gp1.start();
+                    gp2.Start();
                     break;
                 }
 
                 case '2': { //PayCredit
                     System.out.print("  Operation:  PayCredit()");
                     System.out.print("\n");
-                    gp1.payCredit();
+                    gp2.PayCredit();
                     break;
                 }
 
                 case '3': { //Reject
                     System.out.print("  Operation:  Reject()");
                     System.out.print("\n");
-                    gp1.reject();
+                    gp2.Reject();
                     break;
                 }
 
                 case '4': { //Cancel
                     System.out.print("  Operation:  Cancel()");
                     System.out.print("\n");
-                    gp1.cancel();
+                    gp2.cancel();
                     break;
                 }
 
                 case '5': { //Approved
                     System.out.print("  Operation:  Approved()");
                     System.out.print("\n");
-                    gp1.approved();
+                    gp2.Approved();
                     break;
                 }
 
@@ -256,14 +257,14 @@ public class Main {
                     System.out.print("  Enter value of the parameter c:");
                     System.out.print("\n");
                     int c = sc.nextInt();
-                    gp1.payCash(c);
+                    gp2.PayCash(c);
                     break;
                 }
 
                 case '7': { //StartPump
                     System.out.print("  Operation:  StartPump()");
                     System.out.print("\n");
-                    gp1.startPump();
+                    gp2.StartPump();
                     break;
                 }
 
@@ -271,14 +272,14 @@ public class Main {
                 case '8': { //Pump
                     System.out.print("  Operation: Pump()");
                     System.out.print("\n");
-                    gp1.pump();
+                    gp2.Pump();
                     break;
                 }
 
                 case '9': { //StopPump
                     System.out.print("  Operation:  StopPump()");
                     System.out.print("\n");
-                    gp1.stopPump();
+                    gp2.StopPump();
                     break;
                 }
             }

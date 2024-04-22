@@ -1,15 +1,15 @@
 package edu.iit.project.datastore;
 
 public class DS2 extends DataStore{
-    float temp_a;
-    float temp_b;
-    float temp_c;
-    int temp_cash;
-    float Dprice;
-    float Rprice;
-    float Pprice;
-    int cash;
-    float total;
-    int g;
-    float price;
+    public float temp_a;
+    public float temp_b;
+    public float temp_c;
+    public int temp_cash;
+    public float Dprice;
+    public float Rprice;
+    public float Pprice;
+    public int cash;
+    public float total;
+    public int G;
+    public float price;
 }

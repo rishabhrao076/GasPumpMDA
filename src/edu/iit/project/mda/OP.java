@@ -1,5 +1,11 @@
 package edu.iit.project.mda;
+
+import edu.iit.project.datastore.DataStore;
+import edu.iit.project.factories.AbstractFactory;
+
 public class OP {
+    AbstractFactory af;
+    DataStore d;
     // Stores price(s) for the gas from the temporary data store
     public void StorePrices() {
         // Implementation goes here

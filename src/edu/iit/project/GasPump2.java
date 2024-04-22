@@ -1,39 +1,75 @@
 package edu.iit.project;
 
+import edu.iit.project.datastore.DS2;
+import edu.iit.project.datastore.DataStore;
+import edu.iit.project.mda.MDAEFSM;
+
 public class GasPump2 {
+    MDAEFSM m;
+    DataStore d;
 
     public GasPump2() {
+        m = new MDAEFSM();
+        d = new DS2();
     }
 
-    public void start() {
+    public void Activate(float a, float b, float c) {
+        if ((a > 0) && (b > 0) && (c > 0)) {
+            ((DS2) d).temp_a = a;
+            ((DS2) d).temp_b = b;
+            ((DS2) d).temp_c = c;
+            m.Activate();
+        }
+    }
+    public void Start() {
+        m.Start();
     }
 
-    public void cancel() {
+    public void Cancel() {
+        m.Cancel();
     }
 
-    public void payCash(int c) {
+    public void PayCash(int c) {
+        if(c > 0){
+            ((DS2) d).temp_c = c;
+            m.PayType(0);
+        }
     }
 
-    public void regular() {
+    public void Regular() {
+        m.SelectGas(1);
+        m.Continue();
     }
 
-    public void premium() {
+    public void Premium() {
+        m.SelectGas(3);
+        m.Continue();
     }
 
-    public void diesel() {
+    public void Diesel() {
+        m.SelectGas(2);
+        m.Continue();
     }
 
-    public void startPump() {
+    public void StartPump() {
+        m.StartPump();
     }
 
-    public void pumpGALLON() {
+    public void PumpGallon() {
+        if(((DS2) d).cash < ((DS2) d).price*(((DS2) d).G + 1)){
+            m.StopPump();
+        } else {
+            m.Pump();
+        }
+    }
+    public void Stop() {
+        m.StopPump();
+    }
+    public void Receipt() {
+        m.Receipt();
     }
 
-    public void receipt() {
+    public void NoReceipt() {
+        m.NoReceipt();
     }
-
-    public void noReceipt() {
-    }
-
-
 }

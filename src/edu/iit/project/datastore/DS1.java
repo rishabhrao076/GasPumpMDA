@@ -1,12 +1,14 @@
 package edu.iit.project.datastore;
 
 public class DS1 extends DataStore{
-    int temp_a;
-    int price;
-    int l;
-    int total;
-    int temp_c;
-    int w;
-    int cash;
-
+    public int temp_a;
+    public int price;
+    public int L;
+    public int total;
+    public int temp_c;
+    public int w;
+    public int cash;
+    public void setTempA(int a) {
+        temp_a = a;
+    }
 }
