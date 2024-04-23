@@ -1,6 +1,7 @@
 package edu.iit.project.factories;
 
 import edu.iit.project.datastore.DataStore;
+import edu.iit.project.strategies.displaymenu.DisplayMenu;
 import edu.iit.project.strategies.paymessage.PayMessage;
 import edu.iit.project.strategies.storeprice.StorePrice;
 
@@ -18,8 +19,7 @@ public abstract class AbstractFactory {
     }
 
     // Display a menu with a list of selections
-    public void DisplayMenu() {
-    }
+    public abstract DisplayMenu DisplayMenu();
 
     // Displays credit card not approved message
     public void RejectMsg() {

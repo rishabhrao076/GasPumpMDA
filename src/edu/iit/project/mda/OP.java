@@ -2,6 +2,7 @@ package edu.iit.project.mda;
 
 import edu.iit.project.datastore.DataStore;
 import edu.iit.project.factories.AbstractFactory;
+import edu.iit.project.strategies.displaymenu.DisplayMenu;
 import edu.iit.project.strategies.paymessage.PayMessage;
 import edu.iit.project.strategies.storeprice.StorePrice;
 
@@ -10,12 +11,14 @@ public class OP {
     DataStore d;
     StorePrice sp;
     PayMessage pm;
+    DisplayMenu dm;
 
     public OP(AbstractFactory af, DataStore d) {
         this.af = af;
         this.d = d;
         this.sp = this.af.StorePrices();
         this.pm = this.af.PayMsg();
+        this.dm = this.af.DisplayMenu();
     }
 
     // Stores price(s) for the gas from the temporary data store

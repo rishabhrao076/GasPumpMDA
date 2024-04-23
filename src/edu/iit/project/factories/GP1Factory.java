@@ -2,6 +2,8 @@ package edu.iit.project.factories;
 
 import edu.iit.project.datastore.DS1;
 import edu.iit.project.datastore.DataStore;
+import edu.iit.project.strategies.displaymenu.DisplayMenu;
+import edu.iit.project.strategies.displaymenu.DisplayMenu1;
 import edu.iit.project.strategies.paymessage.PayMessage;
 import edu.iit.project.strategies.paymessage.PayMessage1;
 import edu.iit.project.strategies.storeprice.StorePrice;
@@ -21,5 +23,9 @@ public class GP1Factory extends AbstractFactory{
     @Override
     public PayMessage PayMsg() {
         return new PayMessage1();
+    }
+    @Override
+    public DisplayMenu DisplayMenu(){
+        return new DisplayMenu1();
     }
 }
