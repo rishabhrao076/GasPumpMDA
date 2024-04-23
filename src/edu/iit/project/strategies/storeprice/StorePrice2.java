@@ -8,7 +8,9 @@ public class StorePrice2 extends StorePrice {
 
     @Override
     public void storePrice() {
-        d.price = d.temp_a;
+        d.Rprice = d.temp_a;
+        d.Pprice = d.temp_b;
+        d.Dprice = d.temp_c;
     }
 
     @Override

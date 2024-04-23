@@ -8,7 +8,10 @@ public class PumpGasUnit2 extends PumpGasUnit {
 
     @Override
     public void pumpGas() {
-
+        if(d.cash >= d.price*(d.G + 1)){
+            d.G += 1;
+            d.total = d.price*d.G;
+        }
     }
 
     @Override

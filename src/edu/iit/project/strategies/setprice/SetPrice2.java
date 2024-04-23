@@ -10,13 +10,16 @@ public class SetPrice2 extends SetPrice {
     public void setPrice(int g) {
         switch (g){
             case 1:{
-                d.price = d.temp_a;
+                // Set Price of Regular
+                d.price = d.Rprice;
             }
             case 2:{
-                d.price = d.temp_b;
+                // Set Price of Diesel
+                d.price = d.Dprice;
             }
             case 3:{
-                d.price = d.temp_c;
+                // Set Price of Premium
+                d.price = d.Pprice;
             }
         }
     }

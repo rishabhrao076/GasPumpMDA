@@ -1,5 +1,6 @@
 package edu.iit.project;
 
+import edu.iit.project.datastore.DS1;
 import edu.iit.project.datastore.DS2;
 import edu.iit.project.datastore.DataStore;
 import edu.iit.project.mda.MDAEFSM;
@@ -56,7 +57,8 @@ public class GasPump2 {
     }
 
     public void PumpGallon() {
-        if(((DS2) d).cash < ((DS2) d).price*(((DS2) d).G + 1)){
+        DS2 d = (DS2) this.d;
+        if(d.cash < d.price*(d.G+1)){
             m.StopPump();
         } else {
             m.Pump();
