@@ -4,6 +4,8 @@ import edu.iit.project.datastore.DataStore;
 import edu.iit.project.factories.AbstractFactory;
 import edu.iit.project.strategies.displaymenu.DisplayMenu;
 import edu.iit.project.strategies.paymessage.PayMessage;
+import edu.iit.project.strategies.setprice.SetPrice;
+import edu.iit.project.strategies.storecash.StoreCash;
 import edu.iit.project.strategies.storeprice.StorePrice;
 
 public class OP {
@@ -12,6 +14,9 @@ public class OP {
     StorePrice sp;
     PayMessage pm;
     DisplayMenu dm;
+    StoreCash sc;
+
+    SetPrice setP;
 
     public OP(AbstractFactory af, DataStore d) {
         this.af = af;
@@ -19,6 +24,8 @@ public class OP {
         this.sp = this.af.StorePrices();
         this.pm = this.af.PayMsg();
         this.dm = this.af.DisplayMenu();
+        this.sc = this.af.StoreCash();
+        this.setP = this.af.SetPrice();
     }
 
     // Stores price(s) for the gas from the temporary data store
@@ -34,7 +41,8 @@ public class OP {
 
     // Stores cash from the temporary data store
     public void StoreCash() {
-        // Implementation goes here
+        this.sc.setDataStore(d);
+        this.sc.storeCash();
     }
 
     // Display a menu with a list of selections
