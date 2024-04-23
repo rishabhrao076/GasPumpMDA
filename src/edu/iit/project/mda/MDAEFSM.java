@@ -30,7 +30,6 @@ public class MDAEFSM {
         if (this.state.equals(states.get(0))) {
             state.StorePrices();
             setState(1);
-            System.out.println("Current State: S0");
         }
     }
 

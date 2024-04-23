@@ -31,7 +31,7 @@ public class GasPump2 {
 
     public void PayCash(int c) {
         if(c > 0){
-            ((DS2) d).temp_c = c;
+            ((DS2) d).temp_cash = c;
             m.PayType(0);
         }
     }
@@ -57,6 +57,7 @@ public class GasPump2 {
 
     public void PumpGallon() {
         DS2 d = (DS2) this.d;
+        System.out.println("Cash: "+d.cash+" Price: "+d.price+" Gallons: "+d.G);
         if(d.cash < d.price*(d.G+1)){
             m.StopPump();
         } else {

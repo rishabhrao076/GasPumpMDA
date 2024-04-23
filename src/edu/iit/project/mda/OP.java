@@ -88,6 +88,7 @@ public class OP {
 
     // Set the price for the gas identified by g identifier as in SelectGas(int g)
     public void SetPrice(int g) {
+        this.setP.setDataStore(d);
         this.setP.setPrice(g);
     }
 

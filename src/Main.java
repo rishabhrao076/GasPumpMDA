@@ -187,7 +187,7 @@ public class Main {
         System.out.print("\n");
         System.out.print("                  MENU of Operations");
         System.out.print("\n");
-        System.out.print("          0. Activate(int)");
+        System.out.print("          0. Activate(float a, float b, float c)");
         System.out.print("\n");
         System.out.print("          1. Start()");
         System.out.print("\n");
@@ -224,6 +224,8 @@ public class Main {
             System.out.print("\n");
             System.out.print("0-Activate,1-Start,2-PayCash,3-Cancel,4-Regular,5-Premium,6-Diesel,7-StartPump,8-PumpGallon,9-Stop,r-Receipt,n-NoReceipt,q-quit");
             System.out.print("\n");
+            String currentState = m.state.getClass().getSimpleName();
+            System.out.println("Current State: " + currentState);
             ch = sc.next().charAt(0);
             switch (ch) {
                 case '0': { //Activate()
