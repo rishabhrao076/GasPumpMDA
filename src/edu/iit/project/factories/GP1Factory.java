@@ -7,6 +7,8 @@ import edu.iit.project.strategies.cancel.CancelMessage1;
 import edu.iit.project.strategies.displaymenu.DisplayMenu;
 import edu.iit.project.strategies.displaymenu.DisplayMenu1;
 import edu.iit.project.strategies.ejectcard.EjectCard;
+import edu.iit.project.strategies.gaspumpmessage.GasPumpedMessage;
+import edu.iit.project.strategies.gaspumpmessage.GasPumpedMessage1;
 import edu.iit.project.strategies.initialvalues.InitialValues;
 import edu.iit.project.strategies.initialvalues.InitialValues1;
 import edu.iit.project.strategies.paymessage.PayMessage;
@@ -75,8 +77,8 @@ public class GP1Factory extends AbstractFactory{
     }
 
     @Override
-    public void GasPumpedMsg() {
-
+    public GasPumpedMessage GasPumpedMsg() {
+        return new GasPumpedMessage1();
     }
 
     @Override

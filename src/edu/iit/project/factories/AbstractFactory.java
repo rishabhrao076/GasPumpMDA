@@ -4,6 +4,7 @@ import edu.iit.project.datastore.DataStore;
 import edu.iit.project.strategies.cancel.CancelMessage;
 import edu.iit.project.strategies.displaymenu.DisplayMenu;
 import edu.iit.project.strategies.ejectcard.EjectCard;
+import edu.iit.project.strategies.gaspumpmessage.GasPumpedMessage;
 import edu.iit.project.strategies.initialvalues.InitialValues;
 import edu.iit.project.strategies.paymessage.PayMessage;
 import edu.iit.project.strategies.paytype.PayType;
@@ -44,7 +45,7 @@ public abstract class AbstractFactory {
     public abstract PumpGasUnit PumpGasUnit();
 
     // Displays the amount of disposed gas
-    public abstract void GasPumpedMsg();
+    public abstract GasPumpedMessage GasPumpedMsg();
 
     // Print a receipt
     public abstract PrintReceipt PrintReceipt();

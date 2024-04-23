@@ -5,6 +5,7 @@ import edu.iit.project.factories.AbstractFactory;
 import edu.iit.project.strategies.cancel.CancelMessage;
 import edu.iit.project.strategies.displaymenu.DisplayMenu;
 import edu.iit.project.strategies.ejectcard.EjectCard;
+import edu.iit.project.strategies.gaspumpmessage.GasPumpedMessage;
 import edu.iit.project.strategies.initialvalues.InitialValues;
 import edu.iit.project.strategies.paymessage.PayMessage;
 import edu.iit.project.strategies.paytype.PayType;
@@ -37,6 +38,8 @@ public class OP {
 
     ReturnCash ret;
 
+    GasPumpedMessage gpm;
+
     public OP(AbstractFactory af, DataStore d) {
         this.af = af;
         this.d = d;
@@ -52,6 +55,7 @@ public class OP {
         this.rej = this.af.RejectMsg();
         this.pum = this.af.PumpGasUnit();
         this.ret = this.af.ReturnCash();
+        this.gpm = this.af.GasPumpedMsg();
     }
 
     // Stores price(s) for the gas from the temporary data store
@@ -99,7 +103,8 @@ public class OP {
 
     // Displays the amount of disposed gas
     public void GasPumpedMsg() {
-
+        gpm.setDataStore(d);
+        gpm.gpMsg();
     }
 
     // Print a receipt
