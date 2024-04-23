@@ -89,8 +89,8 @@ public class OP {
     }
 
     // Disposes unit of gas and counts # of units disposed and computes Total
-    public PumpGasUnit PumpGasUnit() {
-        pum.pumpGas();
+    public void PumpGasUnit() {
+         this.pum.pumpGas();
     }
 
     // Displays the amount of disposed gas
