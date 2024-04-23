@@ -52,6 +52,7 @@ public class OP {
         this.pt = this.af.SetPayType();
         this.rec = this.af.PrintReceipt();
         this.can = this.af.CancelMsg();
+        this.ej = this.af.EjectCard();
         this.rej = this.af.RejectMsg();
         this.pum = this.af.PumpGasUnit();
         this.ret = this.af.ReturnCash();
@@ -98,7 +99,8 @@ public class OP {
 
     // Disposes unit of gas and counts # of units disposed and computes Total
     public void PumpGasUnit() {
-         this.pum.pumpGas();
+        this.pum.setDataStore(d);
+        this.pum.pumpGas();
     }
 
     // Displays the amount of disposed gas
@@ -109,6 +111,7 @@ public class OP {
 
     // Print a receipt
     public void PrintReceipt() {
+        this.rec.setDataStore(d);
         this.rec.printReceipt();
     }
 

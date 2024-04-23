@@ -17,6 +17,8 @@ public class GasPump1 {
         if(a > 0) {
             ((DS1) d).temp_a = a;
             m.Activate();
+        }else {
+//            System.out.println("Enter value for a > 0");
         }
 
     }
@@ -49,16 +51,17 @@ public class GasPump1 {
     }
 
     public void StartPump() {
-        m.Start();
+        m.SelectGas(1);
+        m.Continue();
+        m.StartPump();
     }
 
     public void Pump() {
         DS1 d = (DS1) this.d;
         if( d.w == 1)
             m.Pump();
-        else if(d.cash < d.price*(d.L + 1)){
-            m.StopPump();
-            m.Receipt();
+        else if(d.w == 0 && d.cash < d.price){
+          this.StopPump();
         } else {
             m.Pump();
         }

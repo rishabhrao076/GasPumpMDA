@@ -4,6 +4,8 @@ public class EjectCard1 extends EjectCard {
 
     @Override
     public void ejectCard() {
-        System.out.println("Print Eject Card");
+        System.out.println("╔════════════════════════════════╗");
+        System.out.println("║          Ejecting Card         ║");
+        System.out.println("╚════════════════════════════════╝");
     }
 }

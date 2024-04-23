@@ -13,4 +13,9 @@ public class S1 extends State {
     public void SetPayType(int t) {
         op.SetPayType(t);
     }
+
+    @Override
+    public void StoreCash(){
+        op.StoreCash();
+    }
 }

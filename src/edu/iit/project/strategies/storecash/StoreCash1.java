@@ -10,6 +10,8 @@ public class StoreCash1 extends StoreCash {
     @Override
     public void storeCash() {
         d.cash = d.cash + d.temp_c;
+        System.out.println("System stored cash: = "+d.cash);
+        System.out.println();
     }
 
     @Override

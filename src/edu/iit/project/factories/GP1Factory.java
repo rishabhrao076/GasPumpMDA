@@ -7,6 +7,7 @@ import edu.iit.project.strategies.cancel.CancelMessage1;
 import edu.iit.project.strategies.displaymenu.DisplayMenu;
 import edu.iit.project.strategies.displaymenu.DisplayMenu1;
 import edu.iit.project.strategies.ejectcard.EjectCard;
+import edu.iit.project.strategies.ejectcard.EjectCard1;
 import edu.iit.project.strategies.gaspumpmessage.GasPumpedMessage;
 import edu.iit.project.strategies.gaspumpmessage.GasPumpedMessage1;
 import edu.iit.project.strategies.initialvalues.InitialValues;
@@ -103,6 +104,6 @@ public class GP1Factory extends AbstractFactory{
 
     @Override
     public EjectCard EjectCard() {
-        return null;
+        return new EjectCard1();
     }
 }

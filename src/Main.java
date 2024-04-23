@@ -6,6 +6,7 @@ import edu.iit.project.factories.AbstractFactory;
 import edu.iit.project.factories.GP1Factory;
 import edu.iit.project.mda.MDAEFSM;
 import edu.iit.project.mda.OP;
+import edu.iit.project.mda.states.State;
 
 import java.util.Scanner;
 
@@ -85,8 +86,10 @@ public class Main {
         while (ch != 'q') {
             System.out.print("  Select Operation: ");
             System.out.print("\n");
-            System.out.print("0-Activate,1-Start,2-PayCredit,3-Reject,                                                          4-Cancel,5-Approved,6-PayCash,7-StartPump, 8-Pump, 9-StopPump, q-quit");
+            System.out.print("0-Activate,1-Start,2-PayCredit,3-Reject,4-Cancel,5-Approved,6-PayCash,7-StartPump, 8-Pump, 9-StopPump, q-quit");
             System.out.print("\n");
+            String currentState = m.state.getClass().getSimpleName();
+            System.out.println("Current State: "+currentState);
             ch = sc.next().charAt(0);
             switch (ch) {
                 case '0': { //Activate()

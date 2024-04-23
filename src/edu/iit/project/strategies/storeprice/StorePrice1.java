@@ -10,6 +10,7 @@ public class StorePrice1 extends StorePrice {
     @Override
     public void storePrice() {
         d.price = d.temp_a;
+        System.out.println("stored a = "+d.price);
     }
 
     @Override

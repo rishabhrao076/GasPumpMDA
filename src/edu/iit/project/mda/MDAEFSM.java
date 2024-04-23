@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class MDAEFSM {
     ArrayList<State> states;
-    State state;
+    public State state;
 
     public MDAEFSM(OP op) {
         this.states = new ArrayList<State>();
@@ -30,6 +30,7 @@ public class MDAEFSM {
         if (this.state.equals(states.get(0))) {
             state.StorePrices();
             setState(1);
+            System.out.println("Current State: S0");
         }
     }
 
@@ -46,9 +47,9 @@ public class MDAEFSM {
         if (this.state.equals(states.get(2))) {
             // Cash
             if (t == 0) {
+                state.SetPayType(t);
                 state.StoreCash();
                 state.DisplayMenu();
-                state.SetPayType(t);
                 setState(4);
             }
             // Credit
@@ -79,9 +80,9 @@ public class MDAEFSM {
     // Indicates that the credit card payment is approved
     public void Approved() {
         if (this.state.equals(states.get(3))) {
-            state.DisplayMenu();
             state.SetPayType(1);
             state.EjectCard();
+            state.DisplayMenu();
             setState(4);
         }
     }

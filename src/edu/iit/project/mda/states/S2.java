@@ -10,11 +10,6 @@ public class S2 extends State {
     }
 
     @Override
-    public void SetPayType(int t) {
-        op.SetPayType(t);
-    }
-
-    @Override
     public void DisplayMenu() {
         op.DisplayMenu();
     }
