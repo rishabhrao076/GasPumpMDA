@@ -3,6 +3,7 @@ package edu.iit.project.factories;
 import edu.iit.project.datastore.DataStore;
 import edu.iit.project.strategies.displaymenu.DisplayMenu;
 import edu.iit.project.strategies.paymessage.PayMessage;
+import edu.iit.project.strategies.paytype.PayType;
 import edu.iit.project.strategies.storeprice.StorePrice;
 
 
@@ -54,8 +55,7 @@ public abstract class AbstractFactory {
     }
 
     // Stores pay type t to variable w in the data store
-    public void SetPayType(int t) {
-    }
+    public abstract PayType SetPayType(int t);
 
     // Card is ejected
     public void EjectCard() {

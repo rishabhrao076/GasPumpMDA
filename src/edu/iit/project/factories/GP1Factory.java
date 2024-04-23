@@ -6,6 +6,8 @@ import edu.iit.project.strategies.displaymenu.DisplayMenu;
 import edu.iit.project.strategies.displaymenu.DisplayMenu1;
 import edu.iit.project.strategies.paymessage.PayMessage;
 import edu.iit.project.strategies.paymessage.PayMessage1;
+import edu.iit.project.strategies.paytype.PayType;
+import edu.iit.project.strategies.paytype.PayType1;
 import edu.iit.project.strategies.storeprice.StorePrice;
 import edu.iit.project.strategies.storeprice.StorePrice1;
 
@@ -27,5 +29,10 @@ public class GP1Factory extends AbstractFactory{
     @Override
     public DisplayMenu DisplayMenu(){
         return new DisplayMenu1();
+    }
+
+    @Override
+    public PayType SetPayType(int t) {
+        return new PayType1();
     }
 }
