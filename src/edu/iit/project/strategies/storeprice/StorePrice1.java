@@ -1,14 +1,19 @@
 package edu.iit.project.strategies.storeprice;
 
 import edu.iit.project.datastore.DS1;
+import edu.iit.project.datastore.DataStore;
 
 public class StorePrice1 extends StorePrice {
-    public StorePrice1(DS1 d) {
-        super(d);
-    }
+
+    DS1 d;
+
     @Override
     public void storePrice() {
-        DS1 d = (DS1) this.d;
         d.price = d.temp_a;
+    }
+
+    @Override
+    public void setDataStore(DataStore d) {
+        this.d = (DS1) d;
     }
 }

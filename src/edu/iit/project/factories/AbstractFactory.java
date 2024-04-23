@@ -1,6 +1,7 @@
 package edu.iit.project.factories;
 
 import edu.iit.project.datastore.DataStore;
+import edu.iit.project.strategies.paymessage.PayMessage;
 import edu.iit.project.strategies.storeprice.StorePrice;
 
 
@@ -10,7 +11,7 @@ public abstract class AbstractFactory {
     public abstract StorePrice StorePrices();
 
     // Displays a type of payment method
-    public abstract void PayMsg();
+    public abstract PayMessage PayMsg();
 
     // Stores cash from the temporary data store
     public void StoreCash() {

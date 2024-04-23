@@ -2,28 +2,31 @@ package edu.iit.project.mda;
 
 import edu.iit.project.datastore.DataStore;
 import edu.iit.project.factories.AbstractFactory;
+import edu.iit.project.strategies.paymessage.PayMessage;
 import edu.iit.project.strategies.storeprice.StorePrice;
 
 public class OP {
     AbstractFactory af;
     DataStore d;
     StorePrice sp;
-
+    PayMessage pm;
 
     public OP(AbstractFactory af, DataStore d) {
         this.af = af;
         this.d = d;
         this.sp = this.af.StorePrices();
+        this.pm = this.af.PayMsg();
     }
 
     // Stores price(s) for the gas from the temporary data store
     public void StorePrices() {
+        this.sp.setDataStore(this.d);
         this.sp.storePrice();
     }
 
     // Displays a type of payment method
     public void PayMsg() {
-        // Implementation goes here
+        this.pm.payMsg();
     }
 
     // Stores cash from the temporary data store
