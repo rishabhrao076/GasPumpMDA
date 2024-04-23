@@ -6,6 +6,7 @@ import edu.iit.project.strategies.cancel.CancelMessage;
 import edu.iit.project.strategies.cancel.CancelMessage1;
 import edu.iit.project.strategies.displaymenu.DisplayMenu;
 import edu.iit.project.strategies.displaymenu.DisplayMenu1;
+import edu.iit.project.strategies.ejectcard.EjectCard;
 import edu.iit.project.strategies.initialvalues.InitialValues;
 import edu.iit.project.strategies.initialvalues.InitialValues1;
 import edu.iit.project.strategies.paymessage.PayMessage;
@@ -14,6 +15,10 @@ import edu.iit.project.strategies.paytype.PayType;
 import edu.iit.project.strategies.paytype.PayType1;
 import edu.iit.project.strategies.receipt.PrintReceipt;
 import edu.iit.project.strategies.receipt.PrintReceipt1;
+import edu.iit.project.strategies.rejectmessage.RejectMessage;
+import edu.iit.project.strategies.rejectmessage.RejectMessage1;
+import edu.iit.project.strategies.returncash.ReturnCash;
+import edu.iit.project.strategies.returncash.ReturnCash1;
 import edu.iit.project.strategies.setprice.SetPrice;
 import edu.iit.project.strategies.setprice.SetPrice1;
 import edu.iit.project.strategies.storecash.StoreCash;
@@ -48,8 +53,8 @@ public class GP1Factory extends AbstractFactory{
     }
 
     @Override
-    public void RejectMsg() {
-
+    public RejectMessage RejectMsg() {
+        return new RejectMessage1();
     }
 
     @Override
@@ -83,7 +88,17 @@ public class GP1Factory extends AbstractFactory{
     }
 
     @Override
+    public ReturnCash ReturnCash() {
+        return new ReturnCash1();
+    }
+
+    @Override
     public PayType SetPayType() {
         return new PayType1();
+    }
+
+    @Override
+    public EjectCard EjectCard() {
+        return null;
     }
 }

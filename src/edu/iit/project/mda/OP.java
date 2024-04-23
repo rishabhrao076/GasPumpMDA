@@ -9,6 +9,7 @@ import edu.iit.project.strategies.initialvalues.InitialValues;
 import edu.iit.project.strategies.paymessage.PayMessage;
 import edu.iit.project.strategies.paytype.PayType;
 import edu.iit.project.strategies.receipt.PrintReceipt;
+import edu.iit.project.strategies.rejectmessage.RejectMessage;
 import edu.iit.project.strategies.setprice.SetPrice;
 import edu.iit.project.strategies.storecash.StoreCash;
 import edu.iit.project.strategies.storeprice.StorePrice;
@@ -31,6 +32,8 @@ public class OP {
 
     CancelMessage can;
 
+    RejectMessage rej;
+
     public OP(AbstractFactory af, DataStore d) {
         this.af = af;
         this.d = d;
@@ -43,6 +46,7 @@ public class OP {
         this.pt = this.af.SetPayType();
         this.rec = this.af.PrintReceipt();
         this.can = this.af.CancelMsg();
+        this.rej = this.af.RejectMsg();
     }
 
     // Stores price(s) for the gas from the temporary data store
@@ -69,7 +73,7 @@ public class OP {
 
     // Displays credit card not approved message
     public void RejectMsg() {
-        // Implementation goes here
+        this.rej.rejectMsg();
     }
 
     // Set the price for the gas identified by g identifier as in SelectGas(int g)

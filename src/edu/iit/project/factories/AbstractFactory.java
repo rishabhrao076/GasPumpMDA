@@ -8,6 +8,7 @@ import edu.iit.project.strategies.initialvalues.InitialValues;
 import edu.iit.project.strategies.paymessage.PayMessage;
 import edu.iit.project.strategies.paytype.PayType;
 import edu.iit.project.strategies.receipt.PrintReceipt;
+import edu.iit.project.strategies.rejectmessage.RejectMessage;
 import edu.iit.project.strategies.returncash.ReturnCash;
 import edu.iit.project.strategies.setprice.SetPrice;
 import edu.iit.project.strategies.storecash.StoreCash;
@@ -30,7 +31,7 @@ public abstract class AbstractFactory {
     public abstract DisplayMenu DisplayMenu();
 
     // Displays credit card not approved message
-    public abstract void RejectMsg();
+    public abstract RejectMessage RejectMsg();
 
     // Set the price for the gas identified by g identifier as in SelectGas(int g)
     public abstract SetPrice SetPrice();
