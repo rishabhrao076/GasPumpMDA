@@ -89,7 +89,7 @@ public class OP {
     }
 
     // Disposes unit of gas and counts # of units disposed and computes Total
-    public void PumpGasUnit() {
+    public PumpGasUnit PumpGasUnit() {
         pum.pumpGas();
     }
 
