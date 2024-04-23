@@ -8,6 +8,8 @@ public class DS2 extends DataStore{
     public float Dprice;
     public float Rprice;
     public float Pprice;
+    public int fuel_type;
+
     public int cash;
     public float total;
     public int G;

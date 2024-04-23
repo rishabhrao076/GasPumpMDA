@@ -3,6 +3,7 @@ package edu.iit.project.mda;
 import edu.iit.project.datastore.DataStore;
 import edu.iit.project.factories.AbstractFactory;
 import edu.iit.project.strategies.displaymenu.DisplayMenu;
+import edu.iit.project.strategies.initialvalues.InitialValues;
 import edu.iit.project.strategies.paymessage.PayMessage;
 import edu.iit.project.strategies.setprice.SetPrice;
 import edu.iit.project.strategies.storecash.StoreCash;
@@ -15,8 +16,8 @@ public class OP {
     PayMessage pm;
     DisplayMenu dm;
     StoreCash sc;
-
     SetPrice setP;
+    InitialValues init;
 
     public OP(AbstractFactory af, DataStore d) {
         this.af = af;
@@ -26,6 +27,7 @@ public class OP {
         this.dm = this.af.DisplayMenu();
         this.sc = this.af.StoreCash();
         this.setP = this.af.SetPrice();
+        this.init = this.af.SetInitialValues();
     }
 
     // Stores price(s) for the gas from the temporary data store
@@ -47,7 +49,7 @@ public class OP {
 
     // Display a menu with a list of selections
     public void DisplayMenu() {
-        // Implementation goes here
+        this.dm.displayMenu();
     }
 
     // Displays credit card not approved message
@@ -57,12 +59,13 @@ public class OP {
 
     // Set the price for the gas identified by g identifier as in SelectGas(int g)
     public void SetPrice(int g) {
-        // Implementation goes here
+        this.setP.setPrice(g);
     }
 
     // Set G (or L) and total to 0
     public void SetInitialValues() {
-        // Implementation goes here
+        this.init.setDataStore(d);
+        this.init.setInitialValues();
     }
 
     // Disposes unit of gas and counts # of units disposed and computes Total

@@ -7,8 +7,8 @@ public class SetPrice2 extends SetPrice {
     DS2 d;
 
     @Override
-    public void setPrice() {
-        switch (d.G){
+    public void setPrice(int g) {
+        switch (g){
             case 1:{
                 d.price = d.temp_a;
             }
