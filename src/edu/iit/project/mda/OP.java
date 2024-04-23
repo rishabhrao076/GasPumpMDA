@@ -11,6 +11,7 @@ import edu.iit.project.strategies.paytype.PayType;
 import edu.iit.project.strategies.pumpgas.PumpGasUnit;
 import edu.iit.project.strategies.receipt.PrintReceipt;
 import edu.iit.project.strategies.rejectmessage.RejectMessage;
+import edu.iit.project.strategies.returncash.ReturnCash;
 import edu.iit.project.strategies.setprice.SetPrice;
 import edu.iit.project.strategies.storecash.StoreCash;
 import edu.iit.project.strategies.storeprice.StorePrice;
@@ -34,6 +35,8 @@ public class OP {
     RejectMessage rej;
     PumpGasUnit pum;
 
+    ReturnCash ret;
+
     public OP(AbstractFactory af, DataStore d) {
         this.af = af;
         this.d = d;
@@ -48,6 +51,7 @@ public class OP {
         this.can = this.af.CancelMsg();
         this.rej = this.af.RejectMsg();
         this.pum = this.af.PumpGasUnit();
+        this.ret = this.af.ReturnCash();
     }
 
     // Stores price(s) for the gas from the temporary data store
@@ -110,7 +114,8 @@ public class OP {
 
     // Returns the remaining cash
     public void ReturnCash() {
-        // Implementation goes here
+        ret.setDataStore(d);
+        ret.returnCash();
     }
 
     // Stores pay type t to variable w in the data store
