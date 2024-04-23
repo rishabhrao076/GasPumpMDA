@@ -1,6 +1,5 @@
 package edu.iit.project.strategies.gaspumpmessage;
 
-import edu.iit.project.datastore.DS1;
 import edu.iit.project.datastore.DS2;
 import edu.iit.project.datastore.DataStore;
 
@@ -14,5 +13,5 @@ public class GasPumpedMessage2 extends GasPumpedMessage {
     }
     public void setDataStore(DataStore d){
         this.d = (DS2) d;
-    };
+    }
 }

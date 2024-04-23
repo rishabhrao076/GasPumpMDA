@@ -9,7 +9,7 @@ public class MDAEFSM {
     public State state;
 
     public MDAEFSM(OP op) {
-        this.states = new ArrayList<State>();
+        this.states = new ArrayList<>();
         this.states.add(new Start(this,op));
         this.states.add(new S0(this,op));
         this.states.add(new S1(this,op));

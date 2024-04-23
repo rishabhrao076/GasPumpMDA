@@ -4,7 +4,7 @@ import edu.iit.project.datastore.DataStore;
 
 public abstract class PumpGasUnit {
 
-    public void pumpGas(){};
+    public void pumpGas(){}
 
-    public void setDataStore(DataStore d){};
+    public void setDataStore(DataStore d){}
 }

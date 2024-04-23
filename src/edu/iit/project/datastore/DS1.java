@@ -8,7 +8,5 @@ public class DS1 extends DataStore{
     public int temp_c;
     public int w;
     public int cash;
-    public void setTempA(int a) {
-        temp_a = a;
-    }
+
 }

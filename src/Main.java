@@ -1,13 +1,11 @@
 import edu.iit.project.GasPump1;
 import edu.iit.project.GasPump2;
-import edu.iit.project.datastore.DS1;
 import edu.iit.project.datastore.DataStore;
 import edu.iit.project.factories.AbstractFactory;
 import edu.iit.project.factories.GP1Factory;
 import edu.iit.project.factories.GP2Factory;
 import edu.iit.project.mda.MDAEFSM;
 import edu.iit.project.mda.OP;
-import edu.iit.project.mda.states.State;
 
 import java.util.Scanner;
 

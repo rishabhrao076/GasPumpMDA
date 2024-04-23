@@ -5,5 +5,5 @@ public abstract class EjectCard {
         System.out.println("╔════════════════════════════════╗");
         System.out.println("║          Ejecting Card         ║");
         System.out.println("╚════════════════════════════════╝");
-    };
+    }
 }
