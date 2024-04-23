@@ -8,6 +8,7 @@ import edu.iit.project.strategies.ejectcard.EjectCard;
 import edu.iit.project.strategies.initialvalues.InitialValues;
 import edu.iit.project.strategies.paymessage.PayMessage;
 import edu.iit.project.strategies.paytype.PayType;
+import edu.iit.project.strategies.pumpgas.PumpGasUnit;
 import edu.iit.project.strategies.receipt.PrintReceipt;
 import edu.iit.project.strategies.rejectmessage.RejectMessage;
 import edu.iit.project.strategies.setprice.SetPrice;
@@ -25,14 +26,13 @@ public class OP {
     InitialValues init;
 
     PayType pt;
-
     EjectCard ej;
 
     PrintReceipt rec;
 
     CancelMessage can;
-
     RejectMessage rej;
+    PumpGasUnit pum;
 
     public OP(AbstractFactory af, DataStore d) {
         this.af = af;
@@ -47,6 +47,7 @@ public class OP {
         this.rec = this.af.PrintReceipt();
         this.can = this.af.CancelMsg();
         this.rej = this.af.RejectMsg();
+        this.pum = this.af.PumpGasUnit();
     }
 
     // Stores price(s) for the gas from the temporary data store
@@ -89,7 +90,7 @@ public class OP {
 
     // Disposes unit of gas and counts # of units disposed and computes Total
     public void PumpGasUnit() {
-        // Implementation goes here
+        pum.pumpGas();
     }
 
     // Displays the amount of disposed gas

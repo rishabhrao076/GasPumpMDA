@@ -7,6 +7,7 @@ import edu.iit.project.strategies.ejectcard.EjectCard;
 import edu.iit.project.strategies.initialvalues.InitialValues;
 import edu.iit.project.strategies.paymessage.PayMessage;
 import edu.iit.project.strategies.paytype.PayType;
+import edu.iit.project.strategies.pumpgas.PumpGasUnit;
 import edu.iit.project.strategies.receipt.PrintReceipt;
 import edu.iit.project.strategies.rejectmessage.RejectMessage;
 import edu.iit.project.strategies.returncash.ReturnCash;
@@ -40,7 +41,7 @@ public abstract class AbstractFactory {
     public abstract InitialValues SetInitialValues();
 
     // Disposes unit of gas and counts # of units disposed and computes Total
-    public abstract void PumpGasUnit();
+    public abstract PumpGasUnit PumpGasUnit();
 
     // Displays the amount of disposed gas
     public abstract void GasPumpedMsg();

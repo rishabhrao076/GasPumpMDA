@@ -13,6 +13,8 @@ import edu.iit.project.strategies.paymessage.PayMessage;
 import edu.iit.project.strategies.paymessage.PayMessage1;
 import edu.iit.project.strategies.paytype.PayType;
 import edu.iit.project.strategies.paytype.PayType1;
+import edu.iit.project.strategies.pumpgas.PumpGasUnit;
+import edu.iit.project.strategies.pumpgas.PumpGasUnit1;
 import edu.iit.project.strategies.receipt.PrintReceipt;
 import edu.iit.project.strategies.receipt.PrintReceipt1;
 import edu.iit.project.strategies.rejectmessage.RejectMessage;
@@ -68,8 +70,8 @@ public class GP1Factory extends AbstractFactory{
     }
 
     @Override
-    public void PumpGasUnit() {
-
+    public PumpGasUnit PumpGasUnit() {
+        return new PumpGasUnit1();
     }
 
     @Override
