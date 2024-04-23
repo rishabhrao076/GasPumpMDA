@@ -13,6 +13,6 @@ public class GasPumpedMessage1 extends GasPumpedMessage {
     }
     public void setDataStore(DataStore d){
         this.d = (DS1) d;
-    };
+    }
 
 }

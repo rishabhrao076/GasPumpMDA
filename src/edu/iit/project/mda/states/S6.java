@@ -16,6 +16,6 @@ public class S6 extends State {
 
     @Override
     public void ReturnCash() {
-        super.ReturnCash();
+        op.ReturnCash();
     }
 }

@@ -21,6 +21,6 @@ public class PumpGasUnit1 extends PumpGasUnit {
     @Override
     public void setDataStore(DataStore d){
         this.d = (DS1) d;
-    };
+    }
 
 }

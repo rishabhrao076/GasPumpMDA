@@ -18,5 +18,5 @@ public class PrintReceipt1 extends PrintReceipt {
     @Override
     public void setDataStore(DataStore d){
         this.d = (DS1) d;
-    };
+    }
 }

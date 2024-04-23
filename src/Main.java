@@ -168,10 +168,10 @@ public class Main {
                     break;
                 }
             }
-            ; // endswitch
+            // endswitch
 
         }
-        ; //endwhile
+        //endwhile
     }
 
 
@@ -238,7 +238,7 @@ public class Main {
                     System.out.print("  Enter value of the parameter c:");
                     System.out.print("\n");
                     float c = sc.nextFloat();
-                    gp2.Activate(a,b,c);
+                    gp2.Activate(a, b, c);
                     break;
                 }
 
@@ -322,10 +322,10 @@ public class Main {
                 }
 
             }
-            ; // endswitch
+            // endswitch
 
         }
-        ; //endwhile
+        //endwhile
 
     }
 }

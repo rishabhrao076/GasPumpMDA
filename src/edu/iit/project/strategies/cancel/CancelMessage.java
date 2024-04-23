@@ -5,5 +5,5 @@ public abstract class CancelMessage {
         System.out.println("╔════════════════════════════════╗");
         System.out.println("║     Transaction Cancelled      ║");
         System.out.println("╚════════════════════════════════╝");
-    };
+    }
 }

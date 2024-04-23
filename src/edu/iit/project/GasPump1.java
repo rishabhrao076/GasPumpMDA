@@ -18,7 +18,7 @@ public class GasPump1 {
             ((DS1) d).temp_a = a;
             m.Activate();
         }else {
-//            System.out.println("Enter value for a > 0");
+            System.out.println("Enter value for a > 0");
         }
 
     }
