@@ -18,4 +18,8 @@ public class S1 extends State {
     public void StoreCash(){
         op.StoreCash();
     }
+    @Override
+    public void DisplayMenu() {
+        op.DisplayMenu();
+    }
 }
