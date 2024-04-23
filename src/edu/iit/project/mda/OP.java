@@ -2,9 +2,13 @@ package edu.iit.project.mda;
 
 import edu.iit.project.datastore.DataStore;
 import edu.iit.project.factories.AbstractFactory;
+import edu.iit.project.strategies.cancel.CancelMessage;
 import edu.iit.project.strategies.displaymenu.DisplayMenu;
+import edu.iit.project.strategies.ejectcard.EjectCard;
 import edu.iit.project.strategies.initialvalues.InitialValues;
 import edu.iit.project.strategies.paymessage.PayMessage;
+import edu.iit.project.strategies.paytype.PayType;
+import edu.iit.project.strategies.receipt.PrintReceipt;
 import edu.iit.project.strategies.setprice.SetPrice;
 import edu.iit.project.strategies.storecash.StoreCash;
 import edu.iit.project.strategies.storeprice.StorePrice;
@@ -19,6 +23,14 @@ public class OP {
     SetPrice setP;
     InitialValues init;
 
+    PayType pt;
+
+    EjectCard ej;
+
+    PrintReceipt rec;
+
+    CancelMessage can;
+
     public OP(AbstractFactory af, DataStore d) {
         this.af = af;
         this.d = d;
@@ -28,6 +40,9 @@ public class OP {
         this.sc = this.af.StoreCash();
         this.setP = this.af.SetPrice();
         this.init = this.af.SetInitialValues();
+        this.pt = this.af.SetPayType();
+        this.rec = this.af.PrintReceipt();
+        this.can = this.af.CancelMsg();
     }
 
     // Stores price(s) for the gas from the temporary data store
@@ -75,17 +90,17 @@ public class OP {
 
     // Displays the amount of disposed gas
     public void GasPumpedMsg() {
-        // Implementation goes here
+
     }
 
     // Print a receipt
     public void PrintReceipt() {
-        // Implementation goes here
+        this.rec.printReceipt();
     }
 
     // Displays a cancellation message
     public void CancelMsg() {
-        // Implementation goes here
+        this.can.cancelMessage();
     }
 
     // Returns the remaining cash
@@ -95,11 +110,12 @@ public class OP {
 
     // Stores pay type t to variable w in the data store
     public void SetPayType(int t) {
-        // Implementation goes here
+        this.pt.setDataStore(d);
+        this.pt.payType(t);
     }
 
     // Card is ejected
     public void EjectCard() {
-        // Implementation goes here
+        this.ej.ejectCard();
     }
 }

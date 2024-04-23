@@ -1,10 +1,14 @@
 package edu.iit.project.factories;
 
 import edu.iit.project.datastore.DataStore;
+import edu.iit.project.strategies.cancel.CancelMessage;
 import edu.iit.project.strategies.displaymenu.DisplayMenu;
+import edu.iit.project.strategies.ejectcard.EjectCard;
 import edu.iit.project.strategies.initialvalues.InitialValues;
 import edu.iit.project.strategies.paymessage.PayMessage;
 import edu.iit.project.strategies.paytype.PayType;
+import edu.iit.project.strategies.receipt.PrintReceipt;
+import edu.iit.project.strategies.returncash.ReturnCash;
 import edu.iit.project.strategies.setprice.SetPrice;
 import edu.iit.project.strategies.storecash.StoreCash;
 import edu.iit.project.strategies.storeprice.StorePrice;
@@ -41,19 +45,17 @@ public abstract class AbstractFactory {
     public abstract void GasPumpedMsg();
 
     // Print a receipt
-    public abstract void PrintReceipt();
+    public abstract PrintReceipt PrintReceipt();
 
     // Displays a cancellation message
-    public abstract void CancelMsg();
+    public abstract CancelMessage CancelMsg();
 
     // Returns the remaining cash
-    public void ReturnCash() {
-    }
+    public abstract ReturnCash ReturnCash();
 
     // Stores pay type t to variable w in the data store
-    public abstract PayType SetPayType(int t);
+    public abstract PayType SetPayType();
 
     // Card is ejected
-    public void EjectCard() {
-    }
+    public abstract EjectCard EjectCard();
 }

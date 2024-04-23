@@ -2,6 +2,8 @@ package edu.iit.project.factories;
 
 import edu.iit.project.datastore.DS1;
 import edu.iit.project.datastore.DataStore;
+import edu.iit.project.strategies.cancel.CancelMessage;
+import edu.iit.project.strategies.cancel.CancelMessage1;
 import edu.iit.project.strategies.displaymenu.DisplayMenu;
 import edu.iit.project.strategies.displaymenu.DisplayMenu1;
 import edu.iit.project.strategies.initialvalues.InitialValues;
@@ -10,6 +12,8 @@ import edu.iit.project.strategies.paymessage.PayMessage;
 import edu.iit.project.strategies.paymessage.PayMessage1;
 import edu.iit.project.strategies.paytype.PayType;
 import edu.iit.project.strategies.paytype.PayType1;
+import edu.iit.project.strategies.receipt.PrintReceipt;
+import edu.iit.project.strategies.receipt.PrintReceipt1;
 import edu.iit.project.strategies.setprice.SetPrice;
 import edu.iit.project.strategies.setprice.SetPrice1;
 import edu.iit.project.strategies.storecash.StoreCash;
@@ -69,17 +73,17 @@ public class GP1Factory extends AbstractFactory{
     }
 
     @Override
-    public void PrintReceipt() {
-
+    public PrintReceipt PrintReceipt() {
+        return new PrintReceipt1();
     }
 
     @Override
-    public void CancelMsg() {
-
+    public CancelMessage CancelMsg() {
+        return new CancelMessage1();
     }
 
     @Override
-    public PayType SetPayType(int t) {
+    public PayType SetPayType() {
         return new PayType1();
     }
 }
