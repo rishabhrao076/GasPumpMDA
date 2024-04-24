@@ -23,4 +23,10 @@ public class S2 extends State {
     public void EjectCard() {
         op.EjectCard();
     }
+
+    @Override
+    public void SetPayType(int t) {
+        op.SetPayType(t);
+    }
+
 }

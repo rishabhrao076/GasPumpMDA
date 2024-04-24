@@ -9,6 +9,7 @@ public class ReturnCash2 extends ReturnCash {
     @Override
     public void returnCash() {
         float change = d.cash - d.total;
+        d.cash = 0;
         System.out.println("╔════════════════════════════════╗");
         System.out.println("║   Change Returned: "+change+"        ║");
         System.out.println("╚════════════════════════════════╝");

@@ -57,7 +57,6 @@ public class GP2 {
 
     public void PumpGallon() {
         DS2 d = (DS2) this.d;
-        System.out.println("Cash: "+d.cash+" Price: "+d.price+" Gallons: "+d.G);
         if(d.cash < d.price*(d.G+1)){
             m.StopPump();
         } else {

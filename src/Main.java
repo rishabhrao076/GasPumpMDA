@@ -183,6 +183,11 @@ public class Main {
         MDAEFSM m = new MDAEFSM(op);
         GP2 gp2 = new GP2(m, d);
 
+        // Initiating Order
+        // Should we have GP make the factory?
+        // And Initiate the pointers later?
+        // Will Change it.
+
         System.out.print("                          GasPump-2");
         System.out.print("\n");
         System.out.print("                  MENU of Operations");
