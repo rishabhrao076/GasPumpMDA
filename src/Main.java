@@ -46,7 +46,7 @@ public class Main {
 
         AbstractFactory af = new GP1Factory();
         DataStore d = af.GetDataStore();
-        OP op = new OP(af, d);
+        OP op = new OP(af);
         MDAEFSM m = new MDAEFSM(op);
         GP1 gp1 = new GP1(m, d);
 
@@ -179,7 +179,7 @@ public class Main {
 
         AbstractFactory af = new GP2Factory();
         DataStore d = af.GetDataStore();
-        OP op = new OP(af, d);
+        OP op = new OP(af);
         MDAEFSM m = new MDAEFSM(op);
         GP2 gp2 = new GP2(m, d);
 
@@ -187,6 +187,8 @@ public class Main {
         // Should we have GP make the factory?
         // And Initiate the pointers later?
         // Will Change it.
+
+        // Can use GP to initialize AF and AF to set DS in GP
 
         System.out.print("                          GasPump-2");
         System.out.print("\n");

@@ -19,7 +19,6 @@ import edu.iit.project.strategies.storeprice.StorePrice;
 
 public class OP {
     AbstractFactory af;
-    DataStore d;
     StorePrice sp;
     PayMessage pm;
     DisplayMenu dm;
@@ -40,9 +39,8 @@ public class OP {
 
     GasPumpedMessage gpm;
 
-    public OP(AbstractFactory af, DataStore d) {
+    public OP(AbstractFactory af) {
         this.af = af;
-        this.d = d;
         this.sp = this.af.StorePrices();
         this.pm = this.af.PayMsg();
         this.dm = this.af.DisplayMenu();
@@ -61,7 +59,6 @@ public class OP {
 
     // Stores price(s) for the gas from the temporary data store
     public void StorePrices() {
-        this.sp.setDataStore(this.d);
         this.sp.storePrice();
     }
 
@@ -72,7 +69,6 @@ public class OP {
 
     // Stores cash from the temporary data store
     public void StoreCash() {
-        this.sc.setDataStore(d);
         this.sc.storeCash();
     }
 
@@ -88,31 +84,26 @@ public class OP {
 
     // Set the price for the gas identified by g identifier as in SelectGas(int g)
     public void SetPrice(int g) {
-        this.setP.setDataStore(d);
         this.setP.setPrice(g);
     }
 
     // Set G (or L) and total to 0
     public void SetInitialValues() {
-        this.init.setDataStore(d);
         this.init.setInitialValues();
     }
 
     // Disposes unit of gas and counts # of units disposed and computes Total
     public void PumpGasUnit() {
-        this.pum.setDataStore(d);
         this.pum.pumpGas();
     }
 
     // Displays the amount of disposed gas
     public void GasPumpedMsg() {
-        gpm.setDataStore(d);
         gpm.gpMsg();
     }
 
     // Print a receipt
     public void PrintReceipt() {
-        this.rec.setDataStore(d);
         this.rec.printReceipt();
     }
 
@@ -123,13 +114,11 @@ public class OP {
 
     // Returns the remaining cash
     public void ReturnCash() {
-        ret.setDataStore(d);
         ret.returnCash();
     }
 
     // Stores pay type t to variable w in the data store
     public void SetPayType(int t) {
-        this.pt.setDataStore(d);
         this.pt.payType(t);
     }
 

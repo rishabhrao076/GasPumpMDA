@@ -18,6 +18,26 @@ import edu.iit.project.strategies.storeprice.StorePrice;
 
 
 public abstract class AbstractFactory {
+    DataStore d;
+    StorePrice sp;
+    PayMessage pm;
+    DisplayMenu dm;
+    StoreCash sc;
+    SetPrice setP;
+    InitialValues init;
+
+    PayType pt;
+    EjectCard ej;
+
+    PrintReceipt rec;
+
+    CancelMessage can;
+    RejectMessage rej;
+    PumpGasUnit pum;
+
+    ReturnCash ret;
+
+    GasPumpedMessage gpm;
 
     public abstract DataStore GetDataStore();
 

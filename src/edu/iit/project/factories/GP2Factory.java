@@ -31,79 +31,110 @@ import edu.iit.project.strategies.storecash.StoreCash2;
 import edu.iit.project.strategies.storeprice.StorePrice;
 import edu.iit.project.strategies.storeprice.StorePrice2;
 
-public class GP2Factory extends AbstractFactory{
+public class GP2Factory extends AbstractFactory {
     @Override
     public StorePrice StorePrices() {
-        return new StorePrice2();
+        if (this.sp == null) {
+            this.sp = new StorePrice2();
+            this.sp.setDataStore(this.GetDataStore());
+        }
+        return this.sp;
     }
 
     @Override
     public DataStore GetDataStore() {
-        return new DS2();
+        return this.d == null ? new DS2() : d;
     }
 
     @Override
     public PayMessage PayMsg() {
-        return new PayMessage2();
+        return this.pm == null ? new PayMessage2() : pm;
     }
 
     @Override
     public StoreCash StoreCash() {
-        return new StoreCash2();
+        if (this.sc == null) {
+            this.sc = new StoreCash2();
+            this.sc.setDataStore(this.GetDataStore());
+        }
+        return this.sc;
     }
 
     @Override
-    public DisplayMenu DisplayMenu(){
-        return new DisplayMenu2();
+    public DisplayMenu DisplayMenu() {
+        return this.dm == null ? new DisplayMenu2() : dm;
     }
 
     @Override
     public RejectMessage RejectMsg() {
-        return new RejectMessage2();
+        return this.rej == null ? new RejectMessage2() : rej;
     }
 
     @Override
     public SetPrice SetPrice() {
-        return new SetPrice2();
+        if (this.setP == null) {
+            this.setP = new SetPrice2();
+            this.setP.setDataStore(this.GetDataStore());
+        }
+        return this.setP;
     }
 
     @Override
     public InitialValues SetInitialValues() {
-        return new InitialValues2();
+        if (this.init == null) {
+            this.init = new InitialValues2();
+            this.init.setDataStore(this.GetDataStore());
+        }
+        return this.init;
     }
 
     @Override
     public PumpGasUnit PumpGasUnit() {
-        return new PumpGasUnit2();
+        if (this.pum == null) {
+            this.pum = new PumpGasUnit2();
+            this.pum.setDataStore(this.GetDataStore());
+        }
+        return this.pum;
     }
 
     @Override
     public GasPumpedMessage GasPumpedMsg() {
-        return new GasPumpedMessage2();
+        if (this.gpm == null) {
+            this.gpm = new GasPumpedMessage2();
+            this.gpm.setDataStore(this.GetDataStore());
+        }
+        return this.gpm;
     }
 
     @Override
     public PrintReceipt PrintReceipt() {
-        return new PrintReceipt2();
-    }
+        if (this.rec == null) {
+            this.rec = new PrintReceipt2();
+            this.rec.setDataStore(this.GetDataStore());
+        }
+        return this.rec;    }
 
     @Override
     public CancelMessage CancelMsg() {
-        return new CancelMessage2();
+        return this.can == null ? new CancelMessage2() : can;
     }
 
     @Override
     public ReturnCash ReturnCash() {
-        return new ReturnCash2();
+        if (this.ret == null) {
+            this.ret = new ReturnCash2();
+            this.ret.setDataStore(this.GetDataStore());
+        }
+        return this.ret;
     }
 
     @Override
     public PayType SetPayType() {
-        return new PayType2();
+        return this.pt == null ? new PayType2() : pt;
     }
 
     @Override
     public EjectCard EjectCard() {
-        return new EjectCard2();
+        return this.ej == null ? new EjectCard2() : ej;
     }
 }
