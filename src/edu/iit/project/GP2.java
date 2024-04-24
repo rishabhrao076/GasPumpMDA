@@ -4,11 +4,11 @@ import edu.iit.project.datastore.DS2;
 import edu.iit.project.datastore.DataStore;
 import edu.iit.project.mda.MDAEFSM;
 
-public class GasPump2 {
+public class GP2 {
     MDAEFSM m;
     DataStore d;
 
-    public GasPump2(MDAEFSM m, DataStore d) {
+    public GP2(MDAEFSM m, DataStore d) {
         this.m = m;
         this.d = d;
     }

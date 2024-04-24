@@ -1,5 +1,5 @@
-import edu.iit.project.GasPump1;
-import edu.iit.project.GasPump2;
+import edu.iit.project.GP1;
+import edu.iit.project.GP2;
 import edu.iit.project.datastore.DataStore;
 import edu.iit.project.factories.AbstractFactory;
 import edu.iit.project.factories.GP1Factory;
@@ -48,7 +48,7 @@ public class Main {
         DataStore d = af.GetDataStore();
         OP op = new OP(af, d);
         MDAEFSM m = new MDAEFSM(op);
-        GasPump1 gp1 = new GasPump1(m, d);
+        GP1 gp1 = new GP1(m, d);
 
         System.out.print("                          GasPump-1");
         System.out.print("\n");
@@ -181,7 +181,7 @@ public class Main {
         DataStore d = af.GetDataStore();
         OP op = new OP(af, d);
         MDAEFSM m = new MDAEFSM(op);
-        GasPump2 gp2 = new GasPump2(m, d);
+        GP2 gp2 = new GP2(m, d);
 
         System.out.print("                          GasPump-2");
         System.out.print("\n");
