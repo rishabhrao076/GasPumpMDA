@@ -14,6 +14,7 @@ public class Main {
         {
             // Menu to choose gas pump to execute
             displayMenu();
+            // display menu gives the options
             Scanner sc = new Scanner(System.in);
             char choice = sc.next().charAt(0);
             while (choice != 'q') {
@@ -51,10 +52,9 @@ public class Main {
     public static void startGasPump1(Scanner sc) {
 
         AbstractFactory af = new GP1Factory();
-        DataStore d = af.GetDataStore();
         OP op = new OP(af);
         MDAEFSM m = new MDAEFSM(op);
-        GP1 gp1 = new GP1(m, d);
+        GP1 gp1 = new GP1(m,af);
 
         System.out.print("                          GasPump-1");
         System.out.print("\n");
@@ -184,16 +184,9 @@ public class Main {
     public static void startGasPump2(Scanner sc) {
 
         AbstractFactory af = new GP2Factory();
-        DataStore d = af.GetDataStore();
         OP op = new OP(af);
         MDAEFSM m = new MDAEFSM(op);
-        GP2 gp2 = new GP2(m, d);
-        // Initiating Order
-        // Should we have GP make the factory?
-        // And Initiate the pointers later?
-        // Will Change it.
-
-        // Can use GP to initialize AF and AF to set DS in GP
+        GP2 gp2 = new GP2(m, af);
 
         System.out.print("                          GasPump-2");
         System.out.print("\n");

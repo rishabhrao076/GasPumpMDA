@@ -2,15 +2,18 @@ package edu.iit.project;
 
 import edu.iit.project.datastore.DS2;
 import edu.iit.project.datastore.DataStore;
+import edu.iit.project.factories.AbstractFactory;
 import edu.iit.project.mda.MDAEFSM;
 
 public class GP2 {
     MDAEFSM m;
     DataStore d;
+    AbstractFactory af;
 
-    public GP2(MDAEFSM m, DataStore d) {
+    public GP2(MDAEFSM m, AbstractFactory af) {
         this.m = m;
-        this.d = d;
+        this.af = af;
+        this.d = af.GetDataStore();
     }
 
     public void Activate(float a, float b, float c) {
