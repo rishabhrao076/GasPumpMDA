@@ -12,20 +12,26 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         {
+            // Menu to choose gas pump to execute
             displayMenu();
             Scanner sc = new Scanner(System.in);
-            int choice = sc.nextInt();
-            while (choice != 3) {
+            char choice = sc.next().charAt(0);
+            while (choice != 'q') {
                 switch (choice) {
-                    case 1: {
+                    case '1': {
                         startGasPump1(sc);
+                        choice = 'z';
+                        break;
                     }
-                    case 2: {
+                    case '2': {
                         startGasPump2(sc);
+                        choice = 'z';
+                        break;
                     }
                     default: {
                         displayMenu();
-                        choice = sc.nextInt();
+                        choice = sc.next().charAt(0);
+                        break;
                     }
                 }
             }
@@ -39,7 +45,7 @@ public class Main {
         System.out.println();
         System.out.println("1. GP-1");
         System.out.println("2. GP-2");
-        System.out.println("3. Exit");
+        System.out.println("q. Exit");
     }
 
     public static void startGasPump1(Scanner sc) {
