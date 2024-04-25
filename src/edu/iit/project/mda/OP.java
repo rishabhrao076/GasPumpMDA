@@ -19,7 +19,7 @@ import edu.iit.project.strategies.storeprice.StorePrice;
 public class OP {
     // Pointer to abstract factory
     AbstractFactory af;
-    // Pointers to different strategy/implementations of the actions
+    // Pointers below are to different strategy/implementations of the actions
     StorePrice sp;
     PayMessage pm;
     DisplayMenu dm;

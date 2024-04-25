@@ -7,6 +7,7 @@ public abstract class State {
     MDAEFSM m;
     OP op;
 
+    // Initialize the State
     public State(MDAEFSM m, OP op) {
         this.m = m;
         this.op = op;
