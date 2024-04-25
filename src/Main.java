@@ -48,8 +48,9 @@ public class Main {
         System.out.println("q. Exit");
     }
 
+    // Operate Gas Pump 1
     public static void startGasPump1(Scanner sc) {
-
+        // Initialize Classes
         AbstractFactory af = new GP1Factory();
         OP op = new OP(af);
         MDAEFSM m = new MDAEFSM(op);
@@ -179,9 +180,9 @@ public class Main {
         //endwhile
     }
 
-
+    // Operate Gas Pump 2
     public static void startGasPump2(Scanner sc) {
-
+        // Initialize Classes
         AbstractFactory af = new GP2Factory();
         OP op = new OP(af);
         MDAEFSM m = new MDAEFSM(op);

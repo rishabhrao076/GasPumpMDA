@@ -12,8 +12,7 @@ public class PumpGasUnit1 extends PumpGasUnit {
             d.total += d.price;
             d.L += 1;
         }// Card
-        else if(d.w == 0 && d.cash >= d.price){
-            d.cash -= d.price;
+        else if(d.w == 0 && d.cash >= d.price*(d.L+1)){
             d.total += d.price;
             d.L += 1;
         }
