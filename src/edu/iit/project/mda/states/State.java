@@ -4,12 +4,10 @@ import edu.iit.project.mda.MDAEFSM;
 import edu.iit.project.mda.OP;
 
 public abstract class State {
-    MDAEFSM m;
     OP op;
 
     // Initialize the State
-    public State(MDAEFSM m, OP op) {
-        this.m = m;
+    public State(OP op) {
         this.op = op;
     }
 

@@ -10,14 +10,14 @@ public class MDAEFSM {
 
     public MDAEFSM(OP op) {
         this.states = new ArrayList<>();
-        this.states.add(new Start(this,op));
-        this.states.add(new S0(this,op));
-        this.states.add(new S1(this,op));
-        this.states.add(new S2(this,op));
-        this.states.add(new S3(this,op));
-        this.states.add(new S4(this,op));
-        this.states.add(new S5(this,op));
-        this.states.add(new S6(this,op));
+        this.states.add(new Start(op));
+        this.states.add(new S0(op));
+        this.states.add(new S1(op));
+        this.states.add(new S2(op));
+        this.states.add(new S3(op));
+        this.states.add(new S4(op));
+        this.states.add(new S5(op));
+        this.states.add(new S6(op));
         this.state = states.get(0);
     }
 

@@ -5,8 +5,8 @@ import edu.iit.project.mda.OP;
 
 public class S2 extends State {
 
-    public S2(MDAEFSM m, OP op) {
-        super(m, op);
+    public S2(OP op) {
+        super(op);
     }
 
     @Override
