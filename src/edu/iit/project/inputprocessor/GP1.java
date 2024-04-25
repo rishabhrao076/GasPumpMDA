@@ -73,8 +73,6 @@ public class GP1 {
 
     // Start Pumping Procedure
     public void StartPump() {
-        // Select gas type 1
-        m.SelectGas(1);
         // Continue the process
         m.Continue();
         // Start pumping
