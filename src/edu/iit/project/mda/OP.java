@@ -17,7 +17,9 @@ import edu.iit.project.strategies.storecash.StoreCash;
 import edu.iit.project.strategies.storeprice.StorePrice;
 
 public class OP {
+    // Pointer to abstract factory
     AbstractFactory af;
+    // Pointers to different strategy/implementations of the actions
     StorePrice sp;
     PayMessage pm;
     DisplayMenu dm;
@@ -61,7 +63,7 @@ public class OP {
         this.sp.storePrice();
     }
 
-    // Displays a type of payment method
+    // Displays Pay Message
     public void PayMsg() {
         this.pm.payMsg();
     }
