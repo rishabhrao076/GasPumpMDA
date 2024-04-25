@@ -11,7 +11,7 @@ public class PrintReceipt2 extends PrintReceipt {
         System.out.println("║              Receipt           ║");
         System.out.println("║                                ║");
         System.out.println("║      Gallons Filled: "+d.G+"         ║");
-        System.out.println("║       Total Cost: "+d.total+"         ║");
+        System.out.printf("║       Total Cost: %.2f         ║\n",d.total);
         System.out.println("╚════════════════════════════════╝");
     }
 

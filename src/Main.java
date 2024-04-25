@@ -182,7 +182,6 @@ public class Main {
         OP op = new OP(af);
         MDAEFSM m = new MDAEFSM(op);
         GP2 gp2 = new GP2(m, d);
-
         // Initiating Order
         // Should we have GP make the factory?
         // And Initiate the pointers later?
@@ -204,9 +203,9 @@ public class Main {
         System.out.print("\n");
         System.out.print("          4. Regular()");
         System.out.print("\n");
-        System.out.print("          5. Premium()");
+        System.out.print("          5. Diesel()");
         System.out.print("\n");
-        System.out.print("          6. Diesel()");
+        System.out.print("          6. Premium()");
         System.out.print("\n");
         System.out.print("          7. StartPump()");
         System.out.print("\n");
@@ -229,7 +228,7 @@ public class Main {
         while (ch != 'q') {
             System.out.print("  Select Operation: ");
             System.out.print("\n");
-            System.out.print("0-Activate,1-Start,2-PayCash,3-Cancel,4-Regular,5-Premium,6-Diesel,7-StartPump,8-PumpGallon,9-Stop,r-Receipt,n-NoReceipt,q-quit");
+            System.out.print("0-Activate,1-Start,2-PayCash,3-Cancel,4-Regular,5-Diesel,6-Premium,7-StartPump,8-PumpGallon,9-Stop,r-Receipt,n-NoReceipt,q-quit");
             System.out.print("\n");
             String currentState = m.state.getClass().getSimpleName();
             System.out.println("Current State: " + currentState);
@@ -280,16 +279,16 @@ public class Main {
                     gp2.Regular();
                     break;
                 }
-                case '5': { //Premium
-                    System.out.print("  Operation:  Premium()");
+                case '5': { //Diesel
+                    System.out.print("  Operation:  Diesel()");
                     System.out.print("\n");
                     gp2.Premium();
                     break;
                 }
 
 
-                case '6': { //Diesel
-                    System.out.print("  Operation:  Diesel()");
+                case '6': { //Premium
+                    System.out.print("  Operation:  Premium()");
                     System.out.print("\n");
                     gp2.Diesel();
                     break;

@@ -11,7 +11,7 @@ public class ReturnCash2 extends ReturnCash {
         float change = d.cash - d.total;
         d.cash = 0;
         System.out.println("╔════════════════════════════════╗");
-        System.out.println("║   Change Returned: "+change+"        ║");
+        System.out.printf("║   Change Returned: %.2f        ║\n",change);
         System.out.println("╚════════════════════════════════╝");
     }
 

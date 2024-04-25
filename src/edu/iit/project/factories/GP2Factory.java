@@ -43,12 +43,17 @@ public class GP2Factory extends AbstractFactory {
 
     @Override
     public DataStore GetDataStore() {
-        return this.d == null ? new DS2() : d;
+        if(this.d == null)
+            this.d = new DS2();
+        return this.d;
     }
 
     @Override
     public PayMessage PayMsg() {
-        return this.pm == null ? new PayMessage2() : pm;
+        if (this.pm == null) {
+            this.pm = new PayMessage2();
+        }
+        return this.pm;
     }
 
     @Override
@@ -62,12 +67,18 @@ public class GP2Factory extends AbstractFactory {
 
     @Override
     public DisplayMenu DisplayMenu() {
-        return this.dm == null ? new DisplayMenu2() : dm;
+        if (this.dm == null) {
+            this.dm = new DisplayMenu2();
+        }
+        return this.dm;
     }
 
     @Override
     public RejectMessage RejectMsg() {
-        return this.rej == null ? new RejectMessage2() : rej;
+        if (this.rej == null) {
+            this.rej = new RejectMessage2();
+        }
+        return this.rej;
     }
 
     @Override
@@ -112,11 +123,15 @@ public class GP2Factory extends AbstractFactory {
             this.rec = new PrintReceipt2();
             this.rec.setDataStore(this.GetDataStore());
         }
-        return this.rec;    }
+        return this.rec;
+    }
 
     @Override
     public CancelMessage CancelMsg() {
-        return this.can == null ? new CancelMessage2() : can;
+        if (this.can == null) {
+            this.can = new CancelMessage2();
+        }
+        return this.can;
     }
 
     @Override
@@ -130,11 +145,17 @@ public class GP2Factory extends AbstractFactory {
 
     @Override
     public PayType SetPayType() {
-        return this.pt == null ? new PayType2() : pt;
+        if (this.pt == null) {
+            this.pt = new PayType2();
+        }
+        return this.pt;
     }
 
     @Override
     public EjectCard EjectCard() {
-        return this.ej == null ? new EjectCard2() : ej;
+        if (this.ej == null) {
+            this.ej = new EjectCard2();
+        }
+        return this.ej;
     }
 }

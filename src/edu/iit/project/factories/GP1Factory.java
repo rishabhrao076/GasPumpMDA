@@ -43,12 +43,17 @@ public class GP1Factory extends AbstractFactory {
 
     @Override
     public DataStore GetDataStore() {
-        return this.d == null ? new DS1() : d;
+        if(this.d == null)
+            this.d = new DS1();
+        return this.d;
     }
 
     @Override
     public PayMessage PayMsg() {
-        return this.pm == null ? new PayMessage1() : pm;
+        if (this.pm == null) {
+            this.pm = new PayMessage1();
+        }
+        return this.pm;
     }
 
     @Override
@@ -62,17 +67,27 @@ public class GP1Factory extends AbstractFactory {
 
     @Override
     public DisplayMenu DisplayMenu() {
-        return this.dm == null ? new DisplayMenu1() : dm;
+        if (this.dm == null) {
+            this.dm = new DisplayMenu1();
+        }
+        return this.dm;
     }
 
     @Override
     public RejectMessage RejectMsg() {
-        return this.rej == null ? new RejectMessage1() : rej;
+        if (this.rej == null) {
+            this.rej = new RejectMessage1();
+        }
+        return this.rej;
     }
 
     @Override
     public SetPrice SetPrice() {
-        return this.setP == null ? new SetPrice1() : setP;
+        if (this.setP == null) {
+            this.setP = new SetPrice1();
+            this.setP.setDataStore(this.GetDataStore());
+        }
+        return this.setP;
     }
 
     @Override
@@ -113,12 +128,19 @@ public class GP1Factory extends AbstractFactory {
 
     @Override
     public CancelMessage CancelMsg() {
-        return this.can == null ? new CancelMessage1() : can;
+        if (this.can == null) {
+            this.can = new CancelMessage1();
+        }
+        return this.can;
     }
 
     @Override
     public ReturnCash ReturnCash() {
-        return this.ret == null ? new ReturnCash1() : ret;
+        if (this.ret == null) {
+            this.ret = new ReturnCash1();
+            this.ret.setDataStore(this.GetDataStore());
+        }
+        return this.ret;
     }
 
     @Override
@@ -132,6 +154,9 @@ public class GP1Factory extends AbstractFactory {
 
     @Override
     public EjectCard EjectCard() {
-        return this.ej == null ? new EjectCard1() : ej;
+        if (this.ej == null) {
+            this.ej = new EjectCard1();
+        }
+        return this.ej;
     }
 }
