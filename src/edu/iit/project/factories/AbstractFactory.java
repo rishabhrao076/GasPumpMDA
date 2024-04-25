@@ -39,8 +39,10 @@ public abstract class AbstractFactory {
 
     GasPumpedMessage gpm;
 
+    // Gets the data store DS1 or DS2 etc.
     public abstract DataStore GetDataStore();
 
+    // Store initialization price to the gas pump
     public abstract StorePrice StorePrices();
 
     // Displays a type of payment method

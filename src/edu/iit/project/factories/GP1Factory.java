@@ -32,6 +32,9 @@ import edu.iit.project.strategies.storeprice.StorePrice;
 import edu.iit.project.strategies.storeprice.StorePrice1;
 
 public class GP1Factory extends AbstractFactory {
+    // for all methods in the factory only create if not created before
+    // usage of all methods mentioned in the parent abstract class
+    // Essentially this will create objects to be used in the strategy pattern
     @Override
     public StorePrice StorePrices() {
         if (this.sp == null) {
