@@ -21,6 +21,7 @@ public class MDAEFSM {
         this.state = states.get(0);
     }
 
+    // Sets the state to input index
     public void setState(int i) {
         this.state = states.get(i);
     }
@@ -133,7 +134,7 @@ public class MDAEFSM {
         }
     }
 
-    // Continues the transaction
+    // Continues the EFSM
     public void Continue() {
         if (this.state.equals(states.get(4))) {
             setState(5);
