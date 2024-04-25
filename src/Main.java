@@ -1,6 +1,5 @@
-import edu.iit.project.GP1;
-import edu.iit.project.GP2;
-import edu.iit.project.datastore.DataStore;
+import edu.iit.project.inputprocessor.GP1;
+import edu.iit.project.inputprocessor.GP2;
 import edu.iit.project.factories.AbstractFactory;
 import edu.iit.project.factories.GP1Factory;
 import edu.iit.project.factories.GP2Factory;

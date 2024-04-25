@@ -1,4 +1,4 @@
-package edu.iit.project;
+package edu.iit.project.inputprocessor;
 
 import edu.iit.project.datastore.DS1;
 import edu.iit.project.datastore.DataStore;
