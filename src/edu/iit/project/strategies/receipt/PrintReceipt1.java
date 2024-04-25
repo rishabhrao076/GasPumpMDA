@@ -12,7 +12,7 @@ public class PrintReceipt1 extends PrintReceipt {
         System.out.println("║              Receipt           ║");
         System.out.println("║                                ║");
         System.out.println("║     Litres Filled: "+d.L+"           ║");
-        System.out.println("║       Total Cost: "+d.total+"            ║");
+        System.out.println("║       Total Cost: "+d.total+"           ║");
         System.out.println("╚════════════════════════════════╝");
     }
     @Override
