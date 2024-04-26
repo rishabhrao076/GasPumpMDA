@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="GasPumpMDA:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/GasPumpMDA_jar</output-path>
+    <root id="archive" name="GasPumpMDA.jar">
+      <element id="module-output" name="GasPumpMDA" />
+    </root>
+  </artifact>
+</component>
