@@ -51,8 +51,12 @@ public class Main {
     // Operate Gas Pump 1
     public static void startGasPump1(Scanner sc) {
         // Initialize Classes
+        // Abstract Factory is part of the Abstract Factory Pattern
+        // and Strategy Pattern
         AbstractFactory af = new GP1Factory();
+        // Op utilizes the Strategy pattern
         OP op = new OP(af);
+        // MDAEFSM utilizes the State pattern.
         MDAEFSM m = new MDAEFSM(op);
         GP1 gp1 = new GP1(m,af);
 
@@ -183,9 +187,13 @@ public class Main {
     // Operate Gas Pump 2
     public static void startGasPump2(Scanner sc) {
         // Initialize Classes
+        // Abstract Factory is part of the Abstract Factory Pattern
+        // and Strategy Pattern
         AbstractFactory af = new GP2Factory();
         OP op = new OP(af);
+        // Op utilizes the Strategy pattern
         MDAEFSM m = new MDAEFSM(op);
+        // MDAEFSM utilizes the State pattern.
         GP2 gp2 = new GP2(m, af);
 
         System.out.print("                          GasPump-2");
