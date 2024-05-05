@@ -6,17 +6,17 @@ This project was implemented in Java. The problem statement is to implement 2 ga
 ## Contents
 
 1. [MDAEFSM Model](#mdaefsm-model)
-    2. [List of Meta Events for MDA-EFSM](#list-of-meta-events-for-mda-efsm)
-    3. [List of Meta Action for MDA-EFSM](#list-of-meta-action-for-mda-efsm)
+    1. [List of Meta Events for MDA-EFSM](#list-of-meta-events-for-mda-efsm)
+    2. [List of Meta Action for MDA-EFSM](#list-of-meta-action-for-mda-efsm)
 2. [Class Diagrams](#class-diagrams)
 4. [Class Responsibilities](#class-responsibilities)
 ## Project Gas Pump MDA-EFSM
 
-### 1.  MDAEFSM Model
+### 1.  MDAEFSM Model {#mdaefsm-model}
 ![MDAEFSM Class Diagram](src/docs/images/mdaefsm.png)
 Figure 1: MDA-EFSM Class Diagram
 
-### 1.1.  List of Meta Events for MDA-EFSM
+### 1.1.  List of Meta Events for MDA-EFSM {#list-of-meta-events-for-mda-efsm}
 
 1.  Activate() //Initializing
 
@@ -44,7 +44,7 @@ Figure 1: MDA-EFSM Class Diagram
 
 13.  Continue() // Go to next state
 
-### 1.2.  List of Meta Action for MDA-EFSM
+### 1.2.  List of Meta Action for MDA-EFSM {#list-of-meta-action-for-mda-efsm}
 
 1.  StorePrices() // stores price(s) for the gas from the temporary data store
 
@@ -81,7 +81,7 @@ Figure 1: MDA-EFSM Class Diagram
 Figure 2: MDA-EFSM State Diagram
 
 
-## 2.  Class Diagrams
+## 2.  Class Diagrams {#class-diagrams}
 
 ### 2.1.  Full Class Diagram (Complete)
 ![MDAEFSM Full Class Diagram](src/docs/images/fullclassdiagram.png)
@@ -99,7 +99,7 @@ Figure 5: Output Processor Implementing Strategy pattern.
 ![MDAEFSM Class Diagram](src/docs/images/abstractfactory.png)
 Figure 6: Abstract Factory Pattern to create new objects
 
-## 3.  Class Responsibilities
+## 3.  Class Responsibilities {#class-responsibilities}
 
 <table><tbody><tr><th colspan="2"><h4><strong>Class Main</strong></h4></th></tr><tr><td><p><strong>Purpose</strong></p></td><td><p>Driver for the application, responsible for displaying the menu and Initiating the classes.</p></td></tr><tr><td colspan="2"><p><strong>Operations</strong></p></td></tr><tr><td><p>main()</p></td><td><p>Starts the program</p></td></tr><tr><td><p>displayMenu()</p></td><td><p>Displays menu to choose gp1 or gp2</p></td></tr><tr><td><p>startGasPump1(scanner)</p></td><td><p>Display menu for gp1 operations</p></td></tr><tr><td><p>startGasPump2(scanner)</p></td><td><p>Display menu for gp2 operations</p></td></tr></tbody></table>
 
