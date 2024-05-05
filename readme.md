@@ -13,7 +13,7 @@ This project was implemented in Java. The problem statement is to implement 2 ga
 ## Project Gas Pump MDA-EFSM
 
 ### 1.  MDAEFSM Model
-![MDAEFSM Class Diagram](docs/images/mdaefsm.png)
+![MDAEFSM Class Diagram](src/docs/images/mdaefsm.png)
 Figure 1: MDA-EFSM Class Diagram
 
 ### 1.1.  List of Meta Events for MDA-EFSM
@@ -77,26 +77,26 @@ Figure 1: MDA-EFSM Class Diagram
 15.  PayMessage() // Show the Pay Message
 
 ### 1.3.  State Diagram/Model of the MDA-EFSM
-![MDAEFSM State Diagram](docs/images/mdaefsmstatediagram.png)
+![MDAEFSM State Diagram](src/docs/images/mdaefsmstatediagram.png)
 Figure 2: MDA-EFSM State Diagram
 
 
 ## 2.  Class Diagrams
 
 ### 2.1.  Full Class Diagram (Complete)
-![MDAEFSM Full Class Diagram](docs/images/fullclassdiagram.png)
+![MDAEFSM Full Class Diagram](src/docs/images/fullclassdiagram.png)
 Figure 3: Full Class Diagram
 
 #### 2.2.  MDAEFSM Class Diagram (State Pattern)  (Components Isolated)
-![MDAEFSM Class Diagram State](docs/images/statepattern.png)
+![MDAEFSM Class Diagram State](src/docs/images/statepattern.png)
 Figure 4: MDEFSM Implementing the State Pattern, (Isolated Class Diagram)
 
 #### 2.3.  Strategy Pattern Class Diagram (Components Isolated)
-![MDAEFSM Class Diagram Strategy](docs/images/strategypattern.png)
+![MDAEFSM Class Diagram Strategy](src/docs/images/strategypattern.png)
 Figure 5: Output Processor Implementing Strategy pattern.
 
 #### 2.4.  Abstract Factory Pattern Class Diagram (Components Isolated)
-![MDAEFSM Class Diagram](docs/images/abstractfactory.png)
+![MDAEFSM Class Diagram](src/docs/images/abstractfactory.png)
 Figure 6: Abstract Factory Pattern to create new objects
 
 ## 3.  Class Responsibilities
